@@ -1,5 +1,0 @@
-clear 
-echo "uploading to Github"
-git push add 
-git commit -m "/home/anas/Desktop/animation_entitee_secondaire.c" 
-git push origin "/home/anas/Desktop/animation_entitee_secondaire.c" 
