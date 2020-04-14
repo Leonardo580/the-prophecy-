@@ -17,23 +17,26 @@ void  game_over(char ch[],SDL_Surface *ecran)
     int i=0;
 
        // while (1){
-        if (i==0)
-        {
+      
             while (i<4){
-            word_pos.x=(int) gameover->w/3+i*50;
-
+            word_pos.x+=50;
+            SDL_BlitSurface(gameover,NULL,ecran,NULL);
             SDL_BlitSurface(word,NULL,ecran,&word_pos);
             SDL_Flip(ecran);
+
             i++;SDL_Delay(1000);
         }
-        }
-        else
+        
+      
         {
-            while (i>0){
-            word_pos.x=(int) gameover->w/3-i*50;
+        	i=0;
+            while (i<4){
+            word_pos.x-=50;
+            SDL_BlitSurface(gameover,NULL,ecran,NULL);
             SDL_BlitSurface(word,NULL,ecran,&word_pos);
+
             SDL_Flip(ecran);
-            i--;SDL_Delay(1000);
+            i++;SDL_Delay(1000);
         }
 
         }
